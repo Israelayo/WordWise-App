@@ -1,0 +1,278 @@
+/* Reset + Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  padding: 80px 20px;
+  animation: fadeIn 1.5s ease-in;
+}
+
+.hero-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.hero-text{
+    flex: 1;
+    min-height: 300px;
+}
+
+.hero-text h1.logo {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.hero-text h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.hero-image{
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.hero-image img{
+    max-width: 100%;
+    height: auto;
+    animation: float 4s ease-in-out infinite;
+    border-radius: 8px;
+}
+
+.cta-btn {
+  background-color: white;
+  color: #2575fc;
+  padding: 15px 25px;
+  outline: none;
+  margin-top: 1rem;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.05);
+}
+
+/* About Section */
+.about {
+  background-color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.about p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 18px;
+}
+
+/* Modal Styles */
+.hidden {
+  display: none !important;
+}
+
+.modal{
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content{
+  background: #f0f0f0;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+}
+
+.nameField{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.emailField{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.modal-content button[type="submit"] {
+  background-color: #2575fc;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.modal-content button[type="submit"]:hover {
+  background-color: #1a5edb;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Social Media */
+.social-media-footer {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+.social-media-footer .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social-icon {
+  margin: 0 10px;
+  font-size: 24px;
+  color: #2575fc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #6a11cb;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }   
+}
+
+@keyframes float {
+    0%, 100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-10px);
+    }    
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-text h1,
+.hero-text p,
+.about h2,
+.about p {
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.hero-text h1 {
+  animation-delay: 0.3s;
+}
+
+.hero-text p {
+  animation-delay: 0.6s;
+}
+
+.about h2 {
+    animation-delay: 0.5s;
+}
+
+.about p{
+    animation-delay: 0.5s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-container{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+  .hero-text h1.logo {
+    font-size: 36px;
+  }
+
+  .hero-text h2 {
+    font-size: 22px;
+  }
+
+  .hero-text p,
+  .about p {
+    font-size: 1rem;
+  }
+}
