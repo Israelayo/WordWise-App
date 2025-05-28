@@ -4,6 +4,8 @@ This is a responsive *Coming Soon* landing page built for the English Learning H
 
 The page is designed to capture user interest and allow them to subscribe for future updates via a modal form. All form submissions are processed securely using PHP.
 
+This site was deployed on Netlify for front-end demonstration only. PHP form functionality was tested locally using XAMPP and can be reviewed in the mail.php file.
+
 ---
 
 ## 🔧 Features
